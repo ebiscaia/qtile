@@ -65,6 +65,7 @@ MOCK_MODULES = [
     "wlroots.wlr_types.output_management_v1",
     "wlroots.wlr_types.pointer_constraints_v1",
     "wlroots.wlr_types.output_power_management_v1",
+    "wlroots.wlr_types.scene",
     "wlroots.wlr_types.server_decoration",
     "wlroots.wlr_types.virtual_keyboard_v1",
     "wlroots.wlr_types.virtual_pointer_v1",
@@ -103,7 +104,6 @@ extensions = [
     "sphinx.ext.graphviz",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
-    "sphinxcontrib.seqdiag",
     "numpydoc",
     "sphinx_qtile",
 ]

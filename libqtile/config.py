@@ -473,9 +473,9 @@ class Screen(CommandObject):
         self.width = width
         self.height = height
 
-        self.set_group(group)
         for i in self.gaps:
             i._configure(qtile, self, reconfigure=reconfigure_gaps)
+        self.set_group(group)
         if self.wallpaper:
             self.wallpaper = os.path.expanduser(self.wallpaper)
             self.paint(self.wallpaper, self.wallpaper_mode)
@@ -639,7 +639,7 @@ class Screen(CommandObject):
         for bar in [self.top, self.bottom, self.left, self.right]:
             if bar:
                 bar.draw()
-        self.qtile.call_soon(self.group.layout_all)
+        self.group.layout_all()
 
     @expose_command()
     def info(self) -> dict[str, int]:
